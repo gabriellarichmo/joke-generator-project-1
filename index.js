@@ -30,6 +30,20 @@ function getNewJoke() {
 }
 //!Remidner to test function getNewJoke() inside the web console
 
+function getNewJoke() {
+  const newJokeSetup = document.querySelector('#new-joke-setup')
+  newJokeSetup.innerText = document.getElementById('new-joke-setup')
+  const newJokePunchline = document.querySelector('#new-joke-punchline')
+  newJokePunchline.innerText = document.getElementById('new-joke-punchline')
+  const newJokeType = document.querySelector('#new-joke-type')
+  newJokeType.innerText = document.getElementById('new-joke-type')
+  const newUserName = document.querySelector('#user-name')
+  newUserName.innerText = document.getElementById('user-name')
+  console.log(`Type: ${newJokeType.innerText}` + `Setup: ${newJokeSetup.innerText}` +
+  `Punchline: ${newJokePunchline.innerText}` + `Submitted By: ${newUserName.innerText}`)
+}
+//!Remidner to test function getNewJoke() inside the web console
+
 
 //const userJokeForm = 
 //userJokeForm.addEventListener('sumbit', submitUserJoke)
