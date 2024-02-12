@@ -1,3 +1,4 @@
+/*
 title {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 14px;
@@ -22,13 +23,86 @@ form {
   display: grid;
   font-size: medium;
 }
+*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-h4 {
-  display: block;
-  margin-block-start: 1.33em;
-  margin-block-end: 1.33em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+.container-1 {
+  
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown {
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
   font-weight: bold;
+}
+
+textarea,
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
 }
