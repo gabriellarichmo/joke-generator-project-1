@@ -1,6 +1,8 @@
-const url = 'https://official-joke-api.appspot.com/random_joke'
+const url = 'https://official-joke-api.appspot.com/jokes/'
 const newJokeForm = document.querySelector('#new-joke')
 //! GLOBAL USE STUFF
+
+let displayedJoke = null;
 
 const fetchJokes = () => {
   return fetch(`${url}`)
@@ -10,11 +12,27 @@ const fetchJokes = () => {
 }
 //! Appending the <h3, h4> (Name and Type of joke) and <p> (Setup and punchline)
 //! To the parent li
-const selectType = document.querySelector(".joke-type-selection");
-const result = document.querySelector(".result");
-selectElement.addEventListener("change", (e) => {
-  result.textContent = `${e.target.value}`;
+
+
+const selectType = document.querySelector("#joke-type-selection");
+
+selectType.addEventListener("change", (e) => {
+  let selectedJokeType = e.target.value;
+  let typeJokeDisplay = document.querySelector('#joke-by-type-display');
+  let typeJokeText = document.querySelector('#joke-by-type-text');
+  let typeJokeSetup = document.querySelector('#joke-by-type-setup');
+  let typeJokePunchline = document.querySelector('#joke-by-type-punchline')
+
+  //typeJokeText.innerText = console.log(`Setup: ${typeJokeSetup.innerText}` + `Punchline: ${typeJokePunchline.innerText}`)
+
+  return fetch(`${url}${selectedJokeType}/random`)
+  .then(resp => resp.json())
+  .then(jokes => console.log(jokes));
+  
+
 });
+
+
 
 function getNewJoke() {
   const newJokeSetup = document.querySelector('#new-joke-setup')

@@ -10,8 +10,9 @@
 <body>
   <h1>Party Favor - Joke Generator</h1>
 
+<div>
 <div class="container-1">
-  <button id="reveal-button">Get a Random Joke!</button>
+  <button id="reveal-button" >Get a Random Joke!</button>
   <div id="og-joke-reveal" style="display: none;">
     <p></p>
   </div>
@@ -27,20 +28,25 @@
       <option value="knock-knock">Knock Knock</option>
     </select>
   </div>
+  <div id="joke-by-type-display">
+    <span id="joke-by-type-setup"></span>
+    <span id="joke-by-type-punchline"></span>
+  </div>
+</div>
 
 <form id="new-joke">
   <h2>Submit Your Own Joke!</h2>
   <label for="new-joke-setup">Joke Setup:</label>
-  <textarea name="joke-setup" id="new-joke-setup" required></textarea>
+  <input type="text" id="new-joke-setup" required></input>
   <label for="new-joke-punchline">Punchline:</label>
-  <textarea name="joke-punchline" id="new-joke-punchline" required></textarea>
+  <input type="text" id="new-joke-punchline" required></input>
   <label for="new-joke-type">Joke Type: </label>
-  <textarea name="joke-type" id="new-joke-type"></textarea>
+  <input type="text" id="new-joke-type"></input>
   <label for="user-name">Your Name(Optional):</label>
-  <textarea name="user-name" id="user-name"></textarea>
+  <input type="text" id="user-name"></input>
   <input type="submit" id='submit-button' value="Submit Here">
 </form>
-</div>
+
   
 
 </body>
