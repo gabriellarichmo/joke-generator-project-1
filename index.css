@@ -10,13 +10,12 @@ body {
   padding: 20px;
 }
 
+
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 36px;
   color: #333;
   margin: 0;
-
-}
 
 .container-1 button {
   background-color: #45b8cc;
@@ -32,19 +31,22 @@ h1 {
   background-color: #45a049;
 }
 
+
+
 .container-1,
-.container-2
-{
+.container-2 {
   width: 100%;
   max-width: 400px;
   margin-top: 20px;
 }
+
 
 .dropdown {
   width: 80%;
   max-width: 400px;
   margin: 20px auto;
 }
+
 
 form {
   width: 80%;
@@ -56,9 +58,11 @@ form {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 label {
   font-weight: bold;
 }
+
 
 textarea,
 input[type="text"],
@@ -71,9 +75,11 @@ select {
   box-sizing: border-box;
 }
 
+
 textarea {
   height: 100px;
 }
+
 
 input[type="submit"] {
   background-color: #4caf50;
@@ -85,9 +91,11 @@ input[type="submit"] {
   font-size: 16px;
 }
 
+
 input[type="submit"]:hover {
   background-color: #45a0a0;
 }
+
 
 .result {
   margin-top: 20px;
