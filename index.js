@@ -40,7 +40,7 @@ function getNewJoke() {
   console.log(`Type: ${newJokeType.innerText}` + `Setup: ${newJokeSetup.innerText}` +
   `Punchline: ${newJokePunchline.innerText}` + `Submitted By: ${newUserName.innerText}`)
 }
-
+//!Remidner to test function getNewJoke() inside the web console
 
 
 //const userJokeForm = 
