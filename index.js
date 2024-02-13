@@ -1,35 +1,29 @@
 const url = 'https://official-joke-api.appspot.com/jokes/'
 const newJokeForm = document.querySelector('#new-joke')
-//! GLOBAL USE STUFF
 
-let displayedJoke = null;
+const renderJokes = () => {}
 
 const fetchJokes = () => {
-  return fetch(`${url}`)
+  return fetch(`${url}random`)
   .then(resp => resp.json())
   .then(jokes => renderJokes(jokes))
   .catch(err => console.log(err))
 }
-//! Appending the <h3, h4> (Name and Type of joke) and <p> (Setup and punchline)
-//! To the parent li
 
 
 const selectType = document.querySelector("#joke-type-selection");
 
 selectType.addEventListener("change", (e) => {
   let selectedJokeType = e.target.value;
-  let typeJokeDisplay = document.querySelector('#joke-by-type-display');
-  let typeJokeText = document.querySelector('#joke-by-type-text');
   let typeJokeSetup = document.querySelector('#joke-by-type-setup');
-  let typeJokePunchline = document.querySelector('#joke-by-type-punchline')
+  let typeJokePunchline = document.querySelector('#joke-by-type-punchline');
 
-  //typeJokeText.innerText = console.log(`Setup: ${typeJokeSetup.innerText}` + `Punchline: ${typeJokePunchline.innerText}`)
-
-  return fetch(`${url}${selectedJokeType}/random`)
+  fetch(`${url}${selectedJokeType}/random`)
   .then(resp => resp.json())
-  .then(jokes => console.log(jokes));
-  
-
+  .then(joke => {
+    typeJokeSetup.innerHTML = joke[0].setup;
+    typeJokePunchline.innerHTML = joke[0].punchline;
+  });
 });
 
 
@@ -46,7 +40,7 @@ function getNewJoke() {
   console.log(`Type: ${newJokeType.innerText}` + `Setup: ${newJokeSetup.innerText}` +
   `Punchline: ${newJokePunchline.innerText}` + `Submitted By: ${newUserName.innerText}`)
 }
-//!Remidner to test function getNewJoke() inside the web console
+
 
 
 //const userJokeForm = 
@@ -55,6 +49,9 @@ function getNewJoke() {
 
 const sumbitUserJoke = (e) => {
   e.preventDefault();
-  const li = document.createElement('li')
-    
+  const div = document.createElement('div')
+    div.append(getNewJoke())
+    console.log(div.childNodes)
 }
+
+//submitUserJoke();
