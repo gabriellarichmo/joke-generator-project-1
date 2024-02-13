@@ -17,10 +17,6 @@ h1 {
   color: #333;
   margin: 0;
 
-
-}
-
-
 .container-1 button {
   background-color: #45b8cc;
   color: #fff;
@@ -31,10 +27,10 @@ h1 {
   font-size: 18px;
 }
 
-
 .container-1 button:hover {
   background-color: #45a049;
 }
+
 
 
 .container-1,
@@ -97,7 +93,7 @@ input[type="submit"] {
 
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #45a0a0;
 }
 
 
