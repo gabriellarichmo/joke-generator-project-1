@@ -18,17 +18,19 @@ h1 {
   margin: 0;
 
 .container-1 button {
-  background-color: #45b8cc;
+  background-color: #4caf50;
   color: #fff;
   padding: 15px 30px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 18px;
+  width: 26%;
+  margin-left: 37%;
 }
 
 .container-1 button:hover {
-  background-color: #45a049;
+  background-color: #7cd1d1;
 }
 
 
@@ -36,8 +38,8 @@ h1 {
 .container-1,
 .container-2 {
   width: 100%;
-  max-width: 400px;
-  margin-top: 20px;
+  /* max-width: 400px; */
+  margin-top: 20px auto;
 }
 
 
@@ -50,12 +52,13 @@ h1 {
 
 form {
   width: 80%;
-  max-width: 400px;
-  margin: 20px auto;
+  /* max-width: 400px; */
+  /* margin: 20px auto; */
   padding: 20px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10%;
 }
 
 
@@ -93,11 +96,27 @@ input[type="submit"] {
 
 
 input[type="submit"]:hover {
-  background-color: #45a0a0;
+  background-color: #7cd1d1;
 }
 
 
 .result {
   margin-top: 20px;
   text-align: center;
+}
+
+.joke-display-area {
+  width: 80%;
+  /* max-width: 400px; */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10%
+}
+
+.joke-display-area, 
+span[type="text"] {
+  font-style: italic;
 }
