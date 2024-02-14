@@ -1,57 +1,62 @@
 const url = 'https://official-joke-api.appspot.com/jokes/'
 const newJokeForm = document.querySelector('#new-joke')
+const generateJokeSetup = document.querySelector('#generate-joke-setup')
+const generateJokePunchline = document.querySelector('#generate-joke-punchline')
 
-const renderJokes = () => {}
+
+function renderJokes(joke) {
+  console.log(joke)
+    generateJokeSetup.innerText = joke.setup;
+    generateJokePunchline.innerText = joke.punchline;
+}
+
 
 const fetchJokes = () => {
   return fetch(`${url}random`)
   .then(resp => resp.json())
-  .then(jokes => renderJokes(jokes))
+  .then(joke => renderJokes(joke))
   .catch(err => console.log(err))
 }
 
+const handleClick = (e) => {
+  e.preventDefault();
+  fetchJokes();
+}
+
+const generateBtn = document.querySelector('#reveal-button');
+generateBtn.addEventListener('click', handleClick);
+
 
 const selectType = document.querySelector("#joke-type-selection");
-
 selectType.addEventListener("change", (e) => {
   let selectedJokeType = e.target.value;
-  let typeJokeSetup = document.querySelector('#joke-by-type-setup');
-  let typeJokePunchline = document.querySelector('#joke-by-type-punchline');
 
   fetch(`${url}${selectedJokeType}/random`)
   .then(resp => resp.json())
   .then(joke => {
-    typeJokeSetup.innerHTML = joke[0].setup;
-    typeJokePunchline.innerHTML = joke[0].punchline;
+    generateJokeSetup.innerHTML = joke[0].setup;
+    generateJokePunchline.innerHTML = joke[0].punchline;
   });
 });
 
-
-
-function getNewJoke() {
-  const newJokeSetup = document.querySelector('#new-joke-setup')
-  newJokeSetup.innerText = document.getElementById('new-joke-setup')
-  const newJokePunchline = document.querySelector('#new-joke-punchline')
-  newJokePunchline.innerText = document.getElementById('new-joke-punchline')
-  const newJokeType = document.querySelector('#new-joke-type')
-  newJokeType.innerText = document.getElementById('new-joke-type')
-  const newUserName = document.querySelector('#user-name')
-  newUserName.innerText = document.getElementById('user-name')
-  console.log(`Type: ${newJokeType.innerText}` + `Setup: ${newJokeSetup.innerText}` +
-  `Punchline: ${newJokePunchline.innerText}` + `Submitted By: ${newUserName.innerText}`)
-}
-//!Remidner to test function getNewJoke() inside the web console
-
-
-//const userJokeForm = 
-//userJokeForm.addEventListener('sumbit', submitUserJoke)
-//! Submit User's Joke and Appends it to the current data list
-
-const sumbitUserJoke = (e) => {
+function getNewJoke(e) {
   e.preventDefault();
-  const div = document.createElement('div')
-    div.append(getNewJoke())
-    console.log(div.childNodes)
+  const newJokeSetup = document.querySelector('#new-joke-setup')
+  const newJokePunchline = document.querySelector('#new-joke-punchline')
+  const newJokeType = document.querySelector('#new-joke-type')
+  const newUserName = document.querySelector('#user-name')
+  const validForm = [newJokeSetup.value, newJokePunchline.value].some(userInput => userInput.trim() === '')
+    if (validForm) {
+      alert ('Please fill in a setup and punchline')
+    }  else {console.log(`Type: ${newJokeType.value} Setup: ${newJokeSetup.value}
+  Punchline: ${newJokePunchline.value} Submitted By: ${newUserName.value}`)}
+  generateJokeSetup.innerHTML = newJokeSetup.value
+  generateJokePunchline.innerHTML = newJokePunchline.value
 }
 
-//submitUserJoke();
+const storingUserJoke = (e) => {
+  const form = document.getElementById('new-joke')
+  form.addEventListener('submit', getNewJoke)
+}
+
+storingUserJoke();
