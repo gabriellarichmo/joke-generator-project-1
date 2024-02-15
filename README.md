@@ -2,7 +2,7 @@
 Ever been in a social setting where the mood has gone a little stale? This joke generating interface can help with just that! The Party Favor Joke Generator can spit out a joke for you with just a click of a button. If you don't want any old random joke, feel free to choose a joke by type or even submit your own! Do your party favor and use this party saver!
 
 
-## Why should I make it?
+## Why did we make it?
 The Party Favor Joke Generator is a fun way to break the ice or to just keep the giggles going. With age appropriate jokes, our app makes it easy to bring humor to any audience or situation!
 
 
