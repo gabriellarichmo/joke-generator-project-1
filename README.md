@@ -1,5 +1,5 @@
 ## Random Joke Generator
-Ever been in a social setting where the mood has gone a little stale? This joke generating interface can help with just that! The Party Favor Joke Generator can spit out a joke for you with just a click of a button. If you don't want any old random joke, feel free to choose a joke by type or even submit your own! This app can be a little party favor and a real party saver!
+Ever been in a social setting where the mood has gone a little stale? This joke generating interface can help with just that! The Party Favor Joke Generator can spit out a joke for you with just a click of a button. If you don't want any old random joke, feel free to choose a joke by type or even submit your own! Do your party favor and use this party saver!
 
 
 ## Why should I make it?
