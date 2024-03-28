@@ -33,7 +33,6 @@ The base URL for your API will be: `https://official-joke-api.appspot.com/jokes/
 
 ## Authors
 - Gabriella Richmond
-- Nima Javan
 
 
 ## License
